@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "installCommand": "npm ci",
+  "buildCommand": "npm run build && npm run check:bundle",
+  "outputDirectory": "dist",
+  "functions": {
+    "api/**/*.ts": {
+      "includeFiles": "prompts/**",
+      "maxDuration": 60
+    }
+  }
+}

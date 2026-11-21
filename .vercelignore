@@ -1,0 +1,6 @@
+.aistudio
+.env*
+.git
+coverage
+dist
+*.zip

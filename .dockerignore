@@ -1,0 +1,8 @@
+.git
+.aistudio
+node_modules
+dist
+coverage
+*.zip
+*.log
+.env*

@@ -1,0 +1,86 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-display: "Fraunces", Georgia, Cambria, serif;
+    --font-body: "Public Sans", system-ui, -apple-system, sans-serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+    --paper-field: #F7F2E7;
+    --paper-sheet: #FCF9F2;
+    --paper-band: #EFE9DA;
+    --paper-rule: #DDD4C2;
+    --ink-body: #172C27;
+    --accent-teal: #075C51;
+    --accent-ochre: #C58628;
+    --accent-clay: #A54937;
+    --hero-forest: #102E28;
+  }
+
+  .dark {
+    --paper-field: #091220;
+    --paper-sheet: #0F1B2E;
+    --paper-band: #0C1627;
+    --paper-rule: #1E304A;
+    --ink-body: #E2E8F0;
+    --accent-teal: #2DD4BF;
+    --accent-ochre: #FBBF24;
+    --accent-clay: #FCA5A5;
+    --hero-forest: #0B1525;
+  }
+
+  html {
+    font-family: var(--font-body);
+    background-color: var(--paper-field);
+    color: var(--ink-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, .font-display {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  h3, h4 {
+    text-wrap: balance;
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.dyslexia-spacing {
+  letter-spacing: 0.03em;
+  word-spacing: 0.1em;
+  line-height: 1.8 !important;
+}
+
+.density-compact {
+  --card-pad: 0.875rem;
+  --stack-gap: 0.75rem;
+  --prose-leading: 1.5;
+}
+
+.density-standard {
+  --card-pad: 1.25rem;
+  --stack-gap: 1.125rem;
+  --prose-leading: 1.65;
+}
+
+.density-spacious {
+  --card-pad: 1.75rem;
+  --stack-gap: 1.5rem;
+  --prose-leading: 1.8;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
