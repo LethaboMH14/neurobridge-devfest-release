@@ -1,0 +1,6 @@
+{
+  "name": "NeuroBridge 2.0",
+  "description": "Evidence-aware adaptive AI learning companion helping South African students master complex study material through simplified explanations, interactive visuals, scientific explorations, and grounded practice.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
